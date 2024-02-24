@@ -181,42 +181,7 @@
                                     </p>
                                 </div>
 
-                                <div class="testimonial-item text-center">
-                                    <canvas id="bar-chart2"></canvas>
-                                    <script>
-                                        var ctxb2 = document.getElementById('bar-chart2').getContext('2d');
-                                        var myChart = new Chart(ctxb2, {
-                                            type: 'bar',
-                                            data: {
-                                                labels: ['Insatisfait','Satisfait','Très insatisfait','Très satisfait'],
-                                                datasets: [{
-                                                    label: 'Nombre de personnes',
-                                                    data: [1,49,1,25],
-                                                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
-                                                    borderColor: 'rgba(75, 192, 192, 1)',
-                                                    borderWidth: 1
-                                                }]
-                                            },
-                                            options: {
-                                                plugins: {
-                                                    title: {
-                                                        display: true,
-                                                        text: 'Comment évaluez-vous la journée dans son ensemble ?',
-                                                        font: {
-                                                            size: 16
-                                                        }
-                                                    }
-                                                },
-                                                scales: {
-                                                    y: {
-                                                        beginAtZero: true
-                                                    }
-                                                }
-                                            }
-                                        });                                    
-                                    </script>
-
-                                </div>
+                                
 
 
 

@@ -76,66 +76,7 @@
             </nav>
             <!-- Navbar End -->
 
-            <!-- résultats Start -->
-            <div class="container-fluid pt-4 px-4">
-                <div class="row g-4">
-                    <div class="col-sm-6 col-xl-6">
-                        <div class="bg-secondary rounded d-flex align-items-center justify-content-between p-4">
-                            <i class="fa fa-chart-line fa-3x text-primary"></i>
-                            <div class="ms-3">
-                                <p class="mb-2"></p>
-                                <center>
-                                    <h6 class="mb-0">
-                                        128 étudiants enquêtées
-                                    </h6>
-                                </center>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-xl-6">
-                        <div class="bg-secondary rounded d-flex align-items-center justify-content-between p-4">
-                            <i class="fa fa-chart-bar fa-3x text-primary"></i>
-                            <div class="ms-3">
-                                <p class="mb-2"></p>
-                                <center>
-                                    <h6 class="mb-0">
-                                    76 étudiants ont déjà pris part à une journée d'intégration de l'école.
-                                    </h6>
-                                </center>
-                            </div>
-                        </div>
-                    </div>
-                    <!--<div class="col-sm-6 col-xl-3">
-                        <div class="bg-secondary rounded d-flex align-items-center justify-content-between p-4">
-                            <i class="fa fa-chart-area fa-3x text-primary"></i>
-                            <div class="ms-3">
-                                <p class="mb-2"></p>
-                                <center>
-                                    <h6 class="mb-0">
-                                         
-                                        <br>Filles de moins 5 ans
-                                    </h6>
-                                </center>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-xl-3">
-                        <div class="bg-secondary rounded d-flex align-items-center justify-content-between p-4">
-                            <i class="fa fa-chart-pie fa-3x text-primary"></i>
-                            <div class="ms-3">
-                                <p class="mb-2"></p>
-                                <center>
-                                    <h6 class="mb-0">
-                                         
-                                        <br>Garçons de moins 5 ans
-                                    </h6>
-                                </center>
-                            </div>
-                        </div>
-                    </div>-->
-                </div>
-            </div>
-            <!-- résulats End -->
+            
 
             <div class="container-fluid pt-4 px-4">
                 <div class="row g-4">
@@ -226,6 +167,43 @@
                                             }
                                         });
                                     </script>
+                                </div>
+
+                                <div class="testimonial-item text-center">
+                                    <canvas id="bar-chart2"></canvas>
+                                    <script>
+                                        var ctxb2 = document.getElementById('bar-chart2').getContext('2d');
+                                        var myChart = new Chart(ctxb2, {
+                                            type: 'bar',
+                                            data: {
+                                                labels: ['Insatisfait','Satisfait','Très insatisfait','Très satisfait'],
+                                                datasets: [{
+                                                    label: 'Nombre de personnes',
+                                                    data: [1,49,1,25],
+                                                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                                                    borderColor: 'rgba(75, 192, 192, 1)',
+                                                    borderWidth: 1
+                                                }]
+                                            },
+                                            options: {
+                                                plugins: {
+                                                    title: {
+                                                        display: true,
+                                                        text: 'Comment évaluez-vous la journée dans son ensemble ?',
+                                                        font: {
+                                                            size: 16
+                                                        }
+                                                    }
+                                                },
+                                                scales: {
+                                                    y: {
+                                                        beginAtZero: true
+                                                    }
+                                                }
+                                            }
+                                        });                                    
+                                    </script>
+
                                 </div>
 
 

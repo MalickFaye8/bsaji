@@ -68,7 +68,7 @@
     top: 0;
     left: 0;
     bottom: 0;
-    width: 250px;
+    width: 270px;
     height: 100vh;
     overflow-y: auto;
     background: var(--secondary);
@@ -115,6 +115,18 @@
         width: 100%;
         margin-left: 0;
     }
+}
+
+/* Ajuster la taille du graphique pour les petits écrans */
+@media screen and (max-width: 600px) {
+    #bar-chart, #bar-chart1 {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.small-text {
+    font-size: .8em;
 }
 
 
